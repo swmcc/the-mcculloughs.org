@@ -13,5 +13,10 @@
   <%= @video.date_of_recording %>
 </p>
 
+<p>
+  <strong>File</strong>
+  <%= image_tag @video.file.preview(resize_to_limit: [100, 100]) %>
+</p>
+
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>
