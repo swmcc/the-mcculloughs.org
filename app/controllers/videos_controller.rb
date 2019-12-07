@@ -9,8 +9,7 @@ class VideosController < ApplicationController
 
   # GET /videos/1
   # GET /videos/1.json
-  def show
-  end
+  def show; end
 
   # GET /videos/new
   def new
@@ -18,8 +17,7 @@ class VideosController < ApplicationController
   end
 
   # GET /videos/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /videos
   # POST /videos.json
@@ -62,13 +60,14 @@ class VideosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_video
-      @video = Video.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def video_params
-      params.require(:video).permit(:name, :description, :file, :date_of_recording)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_video
+    @video = Video.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def video_params
+    params.require(:video).permit(:name, :description, :file, :date_of_recording)
+  end
 end
