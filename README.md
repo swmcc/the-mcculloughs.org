@@ -54,9 +54,16 @@ These two actions are quite wide but I want to put a bit of time into good pract
 
 ### Running
 
+#### Natively
+
+- `foreman start`
+
+#### Docker
+
 - `docker-compose build`
 - `docker-compose run app yarn install`
 - `docker-compose up`
+
 - Go to your browser on http://localhost:3000
 
 ### Multi container architecture
