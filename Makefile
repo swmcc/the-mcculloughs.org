@@ -35,22 +35,13 @@ local.tests:
 	bundle exec rspec
 
 production.console:
-	heroku run rails console
 
 production.db.shell:
-	asdf
 
 production.db.migrate:
-	heroku run rake db:migrate
 
 production.setup:
-	heroku create
-	git push heroku main
-	heroku run rake db:migrate
-	heroku ps:scale web=1
 
 production.deploy:
-	git push production main
 
 production.logs:
-	heroku logs --tail
